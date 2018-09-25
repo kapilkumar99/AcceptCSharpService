@@ -57,19 +57,19 @@ Install the .NET Core Hosting Bundle on the hosting system. The bundle installs 
 
 * Build the Application.
 * Right-click on the AcceptSuiteService project and select Publish from the menu.
-	![Image of Click-Publish](Images/Click-Publish.png)
+	![Image of Click-Publish](Images/Click-Publish.PNG)
 	
 * Configure the path and choose option File System.
-	![Image of Publish-Folder](Images/Publish-Folder.png)
+	![Image of Publish-Folder](Images/Publish-Folder.PNG)
 	
 * After the folder path is set click on Publish Button.
-	![Image of Start-Publishing](Images/Start-Publishing.png)
+	![Image of Start-Publishing](Images/Start-Publishing.PNG)
 	
 * Verify the Publish in the Output Section.
-	![Image of Publish-Succeeded](Images/Publish-Succeeded.png)
+	![Image of Publish-Succeeded](Images/Publish-Succeeded.PNG)
 	
 * It will publish the application on the above-mentioned path.
-	![Image of Publish-Path](Images/Publish-Path.png)
+	![Image of Publish-Path](Images/Publish-Path.PNG)
 	
 	
 ### Create Website on IIS
