@@ -53,7 +53,7 @@ Install the .NET Core Hosting Bundle on the hosting system. The bundle installs 
 ### Publish  AcceptSuiteService Application with Visual Studio 2017
 
 * Open AcceptSuiteService.sln in Visual Studio 2017
-![Image of Open-Solution](Images/Open-Solution.png)
+![Image of Open-Solution](Images/Open-Solution.PNG)
 
 * Build the Application.
 * Right-click on the AcceptSuiteService project and select Publish from the menu.
@@ -93,7 +93,7 @@ Check if .Net Core Windows Server Hosting bundle is installed properly
 * Next step is to check whether the hosting bundle which we installed earlier is installed properly or not.
 
 * For this click on Modules(in IIS Manager) of your newly created website and search for AspNetCoreModule. If it is available, it indicates that IIS is now aware of how to run a .Net Core application
-![AspNetCoreModule](Images/AspNetCoreModule.png)
+![AspNetCoreModule](Images/AspNetCoreModule.PNG)
 
 * ASP.NET Core Module lets you run ASP.NET Core applications on IIS for what it’s good for i.e. security, manageability, and lots more
 
@@ -102,4 +102,11 @@ Check if .Net Core Windows Server Hosting bundle is installed properly
 For Instance we will verify one of the API Method Validate Customer.
 
 URL: https://IPAddress:PortNumber/api/AcceptSuite/ValidateCustomer?apiLoginId=78BZ5Xprry&apiTransactionKey=8s2F95Q7brhHd7Tn&customerId=1813212446
+
+Sample Request URL:  https://10.173.192.248:3030/api/AcceptSuite/ValidateCustomer?apiLoginId=78BZ5Xprry&apiTransactionKey=8s2F95Q7brhHd7Tn&customerId=1813212446
+
+Response : 
+{"status":true,"successValue":"I00001 Successful.","errorMessage":null}
+
+![Service-Response.PNG](Images/Service-Response.PNG)
 
