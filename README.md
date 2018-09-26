@@ -3,28 +3,30 @@
 Developer Guide to deploy the .Net Core Web API Application on IIS.
 
 ## prerequisite:
-*	Windows 10 professional
-*	Microsoft visual studio professional 2017
-*	Microsoft .Net core 2.1.2 from [here](https://www.microsoft.com/net/download)
-*	Internet information services 10
+*	Windows 10 Professional
+*	Microsoft Visual Studio Professional 2017
+*	Internet Information Services 10
 
 
 ## Deploy .Net Core Application to IIS. 
 
-Please follow step by step procedure to host the above applications to  IIS.
+Please follow step by step procedure to host the .Net Core Web API applications to  IIS.
 
 ### IIS configuration
 
 Windows desktop operating systems
+
 Enable the IIS Management Console and World Wide Web Services.
 
 * Navigate to Control Panel > Programs > Programs and Features > Turn Windows features on or off (left side of the screen).
 
-* Open the Internet Information Services node. Open the Web Management Tools node.
+* Open the Internet Information Services node.
 
-* Check the box for IIS Management Console.
+* Check all options for FTP Server.
 
-* Check the box for World Wide Web Services
+* Check all options for Web Management Tools.
+
+* Check all options for World Wide Web Services
 
 * Check the box for Internet Information Services Hostable Web Core.
 
@@ -46,11 +48,14 @@ Install the .NET Core Hosting Bundle on the hosting system. The bundle installs 
 * Once the installation is completed, either restart your system or run below commands in sequence in command prompt:
 
 	net stop was /y
+	
 	net start w3svc
 	
 	The first command will stop the World Wide Web publishing service and the second command will start the service again
 	
 ### Publish  AcceptSuiteService Application with Visual Studio 2017
+
+* Clone the Repository or Download the source code to local folder.
 
 * Open AcceptSuiteService.sln in Visual Studio 2017
 ![Image of Open-Solution](Images/Open-Solution.PNG)
@@ -73,23 +78,33 @@ Install the .NET Core Hosting Bundle on the hosting system. The bundle installs 
 	
 	
 ### Create Website on IIS
-7.	Open IIS as Administrator.
-8.	Right click on sites and select “Add Website”. 
+
+*	Open IIS as Administrator.
+
+*	Right click on sites and select “Add Website”. 
+
 *	Provide Site name and physical path to the app’s deployment folder(C:\inetpub\wwwroot\Publish)
+
 *	Choose https binding.
+
 * 	Select SSL Certificate from drop down.
+
 *   Click OK.
 
 	![Add-Website](Images/Add-Website.png)
 
 #### Under server’s node select Application pools.
+
 * choose the AcceptServiceWebsite Application Pool.
+
 * Right click on the Application Pool and select Basic settings from context menu.
-* In the Edit Application pool window, select “No Managed Code”.
+
+* In the Edit Application pool window, select .NET CLR version to  “No Managed Code”.
 
 	![Application-Pool](Images/Application-Pool.png)
 
 Check if .Net Core Windows Server Hosting bundle is installed properly
+
 * Next step is to check whether the hosting bundle which we installed earlier is installed properly or not.
 
 * For this click on Modules(in IIS Manager) of your newly created website and search for AspNetCoreModule. If it is available, it indicates that IIS is now aware of how to run a .Net Core application
