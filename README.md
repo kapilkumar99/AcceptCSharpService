@@ -116,7 +116,7 @@ Check if .Net Core Windows Server Hosting bundle is installed properly
 ### browse the website. 
 For Instance we will verify one of the API Method Validate Customer.
 
-URL: https://IPAddress:PortNumber/api/AcceptSuite/ValidateCustomer?apiLoginId=78BZ5Xprry&apiTransactionKey=8s2F95Q7brhHd7Tn&customerId=1813212446
+URL: https://<IPAddress>:<PortNumber>/api/AcceptSuite/ValidateCustomer?apiLoginId=78BZ5Xprry&apiTransactionKey=8s2F95Q7brhHd7Tn&customerId=1813212446
 
 Sample Request URL:  https://10.173.192.248:3030/api/AcceptSuite/ValidateCustomer?apiLoginId=78BZ5Xprry&apiTransactionKey=8s2F95Q7brhHd7Tn&customerId=1813212446
 
