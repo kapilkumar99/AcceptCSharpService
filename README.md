@@ -60,6 +60,9 @@ Install the .NET Core Hosting Bundle on the hosting system. The bundle installs 
 * Open AcceptSuiteService.sln in Visual Studio 2017
 ![Image of Open-Solution](Images/Open-Solution.PNG)
 
+* Select IIS Express from the Debugger Options
+![Image of IIS-Express](Images/IIS-Express.png)
+
 * Build the Application.
 * Right-click on the AcceptSuiteService project and select Publish from the menu.
 	![Image of Click-Publish](Images/Click-Publish.PNG)
@@ -85,9 +88,9 @@ Install the .NET Core Hosting Bundle on the hosting system. The bundle installs 
 
 *	Provide Site name and physical path to the app’s deployment folder(C:\inetpub\wwwroot\Publish)
 
-*	Choose https binding.
+*	Choose  binding type **https** from the drop down and provide the port number.
 
-* 	Select SSL Certificate from drop down.
+* 	Select SSL Certificate **IIS Express Development Certificate** from drop down.
 
 *   Click OK.
 
@@ -125,36 +128,36 @@ Response :
 
 ![Service-Response.PNG](Images/Service-Response.PNG)
 
-
-
 ## Proxy Configuration
+
 * Go to Environment Variables.
 
-![Environment-Variables.PNG](Images/Environment-Variables.PNG)
-	
 * Click on Environment Variables.
 
-![System-Variables.PNG](Images/System-Variables.PNG)
+![Environment-Variables.PNG](Images/Environment-Variables.PNG)
 
 * Add System Variables
-	https.useProxy
+
+	**https.useProxy**
 	
 	 if https.useProxy is set to true need to provide the values for below system variables.
 	
 	 if https.useProxy is set to false need not provide the values for below system variables.
 	
-	https.proxyHost
+	**https.proxyHost**
 	
 	 https.proxyHost value should be **userproxy.visa.com**
 	
-	https.proxyPort
+	**https.proxyPort**
 	
 	 https.proxyPort value should be **443**
 	
-	https.proxyUsername
+	**https.proxyUsername**
 	
 	https.proxyUsername value should be **Your NTUserName**
 	
-	https.proxyPassword
+	**https.proxyPassword**
 	
 	https.proxyPassword value should be **Your NTPassword**
+	
+	![System-Variables.PNG](Images/System-Variables.PNG)
