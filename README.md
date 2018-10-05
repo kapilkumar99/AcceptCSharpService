@@ -125,3 +125,36 @@ Response :
 
 ![Service-Response.PNG](Images/Service-Response.PNG)
 
+
+
+## Proxy Configuration
+* Go to Environment Variables.
+
+![Environment-Variables.PNG](Images/Environment-Variables.PNG)
+	
+* Click on Environment Variables.
+
+![System-Variables.PNG](Images/System-Variables.PNG)
+
+* Add System Variables
+	https.useProxy
+	
+	 if https.useProxy is set to true need to provide the values for below system variables.
+	
+	 if https.useProxy is set to false need not provide the values for below system variables.
+	
+	https.proxyHost
+	
+	 https.proxyHost value should be **userproxy.visa.com**
+	
+	https.proxyPort
+	
+	 https.proxyPort value should be **443**
+	
+	https.proxyUsername
+	
+	https.proxyUsername value should be **Your NTUserName**
+	
+	https.proxyPassword
+	
+	https.proxyPassword value should be **Your NTPassword**
