@@ -42,21 +42,17 @@ namespace AcceptSuiteService.Controllers
 
 			try
 			{
-
 				ProxyMethod();
 
 				// creates a transaction by calling the sample code API
 				ANetApiResponse profileResponse = CreateAnAcceptPaymentTransaction.Run(apiLoginId, apiTransactionKey, token);
 
-
 				if (profileResponse != null)
 				{
-
-
 					if (profileResponse.messages.resultCode.ToString().ToLower() == "ok")
 					{
 						objAcceptResponse.status = true;
-						objAcceptResponse.successValue = ((AuthorizeNet.Api.Contracts.V1.createTransactionResponse)profileResponse)
+						objAcceptResponse.successValue = ((createTransactionResponse)profileResponse)
 							.transactionResponse.transId;
 
 					}
@@ -68,10 +64,10 @@ namespace AcceptSuiteService.Controllers
 							objAcceptResponse.errorMessage = profileResponse.messages.message[0].code + " " +
 							                            profileResponse.messages.message[0].text;
 						else
-							objAcceptResponse.errorMessage = ((AuthorizeNet.Api.Contracts.V1.createTransactionResponse)profileResponse)
+							objAcceptResponse.errorMessage = ((createTransactionResponse)profileResponse)
 									  .transactionResponse
 									  .errors[0].errorCode +
-									  ((AuthorizeNet.Api.Contracts.V1.createTransactionResponse)profileResponse)
+									  ((createTransactionResponse)profileResponse)
 									  .transactionResponse.errors[0].errorText;
 
 					}
@@ -127,14 +123,11 @@ namespace AcceptSuiteService.Controllers
 
 				if (response != null)
 				{
-
-
-
 					if (response.messages.resultCode.ToString().ToLower() == "ok")
 					{
 						objAcceptResponse.status = true;
 						objAcceptResponse.successValue =
-							((AuthorizeNet.Api.Contracts.V1.getHostedPaymentPageResponse)response).token;
+							((getHostedPaymentPageResponse)response).token;
 
 					}
 					else
@@ -201,7 +194,7 @@ namespace AcceptSuiteService.Controllers
 					if (response.messages.resultCode.ToString().ToLower() == "ok")
 					{
 						objAcceptResponse.status = true;
-						objAcceptResponse.successValue = ((AuthorizeNet.Api.Contracts.V1.getHostedProfilePageResponse)response).token;					
+						objAcceptResponse.successValue = ((getHostedProfilePageResponse)response).token;					
 
 					}
 					else
