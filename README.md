@@ -32,6 +32,8 @@ Enable the IIS Management Console and World Wide Web Services.
 
 ![Image of Windows Feature](Images/Windows-Features.png)
 
+* Click OK and wait till the installation is over.
+
 * Restart the system.
 
 
@@ -45,13 +47,17 @@ Install the .NET Core Hosting Bundle on the hosting system. The bundle installs 
 * Run the installer on the server.
 * Wait till the installation is over.
 
-* Once the installation is completed, either restart your system or run below commands in sequence in command prompt:
+* Once the installation is completed, either restart your system [**Recommended**] 
+
+				(or)
+
+run below commands in sequence in command prompt:
 
 	net stop was /y
 	
 	net start w3svc
 	
-	The first command will stop the World Wide Web publishing service and the second command will start the service again
+The first command will stop the World Wide Web publishing service and the second command will start the service again
 	
 ### Publish  AcceptSuiteService Application with Visual Studio 2017
 
@@ -115,19 +121,6 @@ Check if .Net Core Windows Server Hosting bundle is installed properly
 
 * ASP.NET Core Module lets you run ASP.NET Core applications on IIS for what it’s good for i.e. security, manageability, and lots more
 
-
-### browse the website. 
-For Instance we will verify one of the API Method Validate Customer.
-
-URL: https://<IPAddress>:<PortNumber>/api/AcceptSuite/ValidateCustomer?apiLoginId=78BZ5Xprry&apiTransactionKey=8s2F95Q7brhHd7Tn&customerId=1813212446
-
-Sample Request URL:  https://10.173.192.248:3030/api/AcceptSuite/ValidateCustomer?apiLoginId=78BZ5Xprry&apiTransactionKey=8s2F95Q7brhHd7Tn&customerId=1813212446
-
-Response : 
-{"status":true,"successValue":"I00001 Successful.","errorMessage":null}
-
-![Service-Response.PNG](Images/Service-Response.PNG)
-
 ## Proxy Configuration
 
 * Go to Environment Variables.
@@ -161,3 +154,19 @@ Response :
 	https.proxyPassword value should be **Your NTPassword**
 	
 	![System-Variables.PNG](Images/System-Variables.PNG)
+	
+	### browse the website. 
+For Instance we will verify one of the API Method Validate Customer.
+
+URL: https://<IPAddress>:<PortNumber>/api/AcceptSuite/ValidateCustomer?apiLoginId=78BZ5Xprry&apiTransactionKey=8s2F95Q7brhHd7Tn&customerId=1813212446
+
+* Sample Request URL
+
+**Validate Customer API**: https://10.173.192.248:3030/api/AcceptSuite/ValidateCustomer?apiLoginId=78BZ5Xprry&apiTransactionKey=8s2F95Q7brhHd7Tn&customerId=1813212446
+
+**Accept JS/UI**: https://10.173.192.248:3030/api/AcceptSuite/AcceptJS?apiLoginId=78BZ5Xprry&apiTransactionKey=8s2F95Q7brhHd7Tn&token=eyJjb2RlIjoiNTBfMl8wNjAwMDUyMkIzMkVGQTMyOURENzIzMkFCRENERTczM0JCQkY5RTEyMDdGOUUyMEQxQzJFNEMwNjk0QTQzNjdCQUY5NDZFMDRFNkNBRkRCOEZFQjA4NDI5MjE5OEQyOUI2ODdDMDc3IiwidG9rZW4iOiI5NTM4OTk0MTEwNDY1ODgzMjA0NjAzIiwidiI6IjEuMSJ9
+
+* Response : 
+{"status":true,"successValue":"I00001 Successful.","errorMessage":null}
+
+![Service-Response.PNG](Images/Service-Response.PNG)
