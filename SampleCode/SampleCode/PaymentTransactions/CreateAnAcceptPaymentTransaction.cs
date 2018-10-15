@@ -27,8 +27,7 @@ namespace net.authorize.sample
 
             var opaqueData = new opaqueDataType
             {
-                dataDescriptor = "COMMON.ACCEPT.INAPP.PAYMENT",
-				//dataValue = "119eyJjb2RlIjoiNTBfMl8wNjAwMDUyN0JEODE4RjQxOUEyRjhGQkIxMkY0MzdGQjAxQUIwRTY2NjhFNEFCN0VENzE4NTUwMjlGRUU0M0JFMENERUIwQzM2M0ExOUEwMDAzNzlGRDNFMjBCODJEMDFCQjkyNEJDIiwidG9rZW4iOiI5NDkwMjMyMTAyOTQwOTk5NDA0NjAzIiwidiI6IjEuMSJ9"
+                dataDescriptor = "COMMON.ACCEPT.INAPP.PAYMENT",				
 				dataValue = token
 
 			};
@@ -54,7 +53,7 @@ namespace net.authorize.sample
             {
                 transactionType = transactionTypeEnum.authCaptureTransaction.ToString(),    // charge the card
 
-                amount = 22,
+                amount = 99,
                 payment = paymentType,
                 billTo = billingAddress,
                 lineItems = lineItems

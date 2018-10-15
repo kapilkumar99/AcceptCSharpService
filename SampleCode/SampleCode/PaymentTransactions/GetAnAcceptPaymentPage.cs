@@ -39,10 +39,10 @@ namespace net.authorize.sample
 	        settings[3] = new settingType();
 	        settings[3].settingName = settingNameEnum.hostedPaymentBillingAddressOptions.ToString();
 	        settings[3].settingValue = "{\"show\": false}";
-
+			
 			settings[4] = new settingType();
 			settings[4].settingName = settingNameEnum.hostedPaymentReturnOptions.ToString();
-			settings[4].settingValue = "{\"showReceipt\": false,\"url\":\"" + hostedPaymentIFrameCommunicatorUrl + "\",\"urlText\":\"Continue\",\"cancelUrl\":\"" + hostedPaymentIFrameCommunicatorUrl + "\",\"cancelUrlText\":\"Cancel\"}";
+			settings[4].settingValue = "{\"showReceipt\": false,\"url\":\"" + hostedPaymentIFrameCommunicatorUrl + "\",\"urlText\":\"Continue\",\"cancelUrlText\":\"Cancel\"}";
 		
 
 			var custprofile = new customerProfilePaymentType
